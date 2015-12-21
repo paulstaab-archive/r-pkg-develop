@@ -1,10 +1,9 @@
 FROM rocker/hadleyverse
 MAINTAINER Paul Staab <develop (at) paulstaab.de>
 
-# Install valgrind and seq-gen
+# Install valgrind
 RUN apt-get update \
   && apt-get install -y --no-install-recommends -t unstable \
-    seq-gen \
     valgrind \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/ \
