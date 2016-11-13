@@ -1,4 +1,4 @@
-FROM rocker/hadleyverse
+FROM rocker/tidyverse
 MAINTAINER Paul Staab <develop (at) paulstaab.de>
 
 # Install valgrind
@@ -14,4 +14,11 @@ RUN install2.r --error --deps TRUE \
   coala \
   jaatha \ 
   scrm
+
+# Entrypoints with name "/init" cause problems with
+# RedHeads patched version of docker.
+# Hence rename it to /ep
+RUN mv /init /ep
+
+CMD ["/ep"]
 
