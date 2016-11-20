@@ -11,7 +11,7 @@ RUN apt-get update \
   && rm -rf /tmp/downloaded_packages/ /tmp/*.rds
 
 # Entrypoints with name "/init" cause problems with
-# RedHeads patched version of docker.
+# Red Hat's patched version of docker.
 # Hence rename it to /ep
 RUN mv /init /ep
 
