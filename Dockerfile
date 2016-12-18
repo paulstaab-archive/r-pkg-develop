@@ -13,7 +13,7 @@ RUN apt-get update && \
   rm -rf /tmp/downloaded_packages/ /tmp/*.rds 
   
 # Install my R Packages with suggested dependencies
-  /etc/environment && install2.r --error --deps "TRUE" \
+RUN . /etc/environment && install2.r --error --deps "TRUE" \
     coala \
     jaatha \
     scrm
