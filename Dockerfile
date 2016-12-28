@@ -7,7 +7,8 @@ RUN apt-get update && \
      default-jre \
      openssh-client \
      qpdf \
-     rsync && \
+     rsync \
+     texlive-latex-base && \
   apt-get clean && \
   rm -rf /var/lib/apt/lists/ && \
   rm -rf /tmp/downloaded_packages/ /tmp/*.rds 
