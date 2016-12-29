@@ -9,6 +9,7 @@ RUN apt-get update && \
      qpdf \
      rsync \
      texlive-fonts-extra \
+     texlive-fonts-recommended \
      texlive-latex-base \
      texi2html \
      texinfo && \
