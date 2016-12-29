@@ -8,7 +8,9 @@ RUN apt-get update && \
      openssh-client \
      qpdf \
      rsync \
+     texlive-fonts-extra \
      texlive-latex-base \
+     texi2html \
      texinfo && \
   apt-get clean && \
   rm -rf /var/lib/apt/lists/ && \
