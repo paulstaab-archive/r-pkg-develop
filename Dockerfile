@@ -12,6 +12,7 @@ RUN apt-get update && \
      texlive-fonts-extra \
      texlive-fonts-recommended \
      texlive-latex-base \
+     texlive-latex-recommended \
      texi2html \
      texinfo && \
   apt-get clean && \
@@ -23,11 +24,3 @@ RUN install2.r --error --deps "TRUE" \
     coala \
     jaatha \
     scrm
-
-# Entrypoints with name "/init" cause problems with
-# Red Hat's patched version of docker.
-# Hence rename it to /ep
-RUN mv /init /ep
-
-CMD ["/ep"]
-
