@@ -19,7 +19,11 @@ RUN apt-get update && \
   rm -rf /var/lib/apt/lists/ && \
   rm -rf /tmp/downloaded_packages/ /tmp/*.rds 
   
-# Install my R Packages with suggested dependencies
+# Install useful R packages
+RUN install2.r --error \
+    profvis
+  
+# Install my R packages with suggested dependencies
 RUN install2.r --error --deps "TRUE" \
     coala \
     jaatha \
